@@ -1,12 +1,17 @@
 // --- EJERCICIO 4.Read Books
 
-function isBookRead(books, titleToSearch) {
+function isBookRead(books: book[], titleToSearch: string): boolean {
   // Implementation here
   return books.some(books => books.title == titleToSearch && books.isRead == true);
 }
 
 // Ejemplo:
-const books = [
+interface book {
+  title: string;
+  isRead: boolean;
+}
+
+const books: book[] = [
   {title: "Harry Potter y la piedra filosofal", isRead: true},
   {title: "Canción de hielo y fuego", isRead: false},
   {title: "Devastación", isRead: true},
